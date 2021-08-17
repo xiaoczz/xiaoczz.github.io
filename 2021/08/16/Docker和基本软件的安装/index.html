@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Docker安装1.安装Docker 安装Docker：yum -y install docker   开机自启：systemctl enable docker   启动Docker： systemctl start docker   查看Docker当前的版本docker version    2.Docker加速仓库配置 切换到Docker的配置目录里面： cd &#x2F;etc&#x2F;docker&#x2F;">
+<meta name="description" content="1.Docker安装1.1.安装Docker 安装Docker：yum -y install docker   开机自启：systemctl enable docker   启动Docker： systemctl start docker   查看Docker当前的版本docker version    1.2.Docker加速仓库配置 切换到Docker的配置目录里面： cd &#x2F;etc&#x2F;dock">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker和基本软件的安装">
 <meta property="og:url" content="http://example.com/2021/08/16/Docker%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="小程">
-<meta property="og:description" content="Docker安装1.安装Docker 安装Docker：yum -y install docker   开机自启：systemctl enable docker   启动Docker： systemctl start docker   查看Docker当前的版本docker version    2.Docker加速仓库配置 切换到Docker的配置目录里面： cd &#x2F;etc&#x2F;docker&#x2F;">
+<meta property="og:description" content="1.Docker安装1.1.安装Docker 安装Docker：yum -y install docker   开机自启：systemctl enable docker   启动Docker： systemctl start docker   查看Docker当前的版本docker version    1.2.Docker加速仓库配置 切换到Docker的配置目录里面： cd &#x2F;etc&#x2F;dock">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-08-16T06:43:22.000Z">
-<meta property="article:modified_time" content="2021-08-16T06:45:03.510Z">
+<meta property="article:modified_time" content="2021-08-17T09:14:00.853Z">
 <meta property="article:author" content="xiaoczz">
 <meta property="article:tag" content="Docker和基本软件的安装">
 <meta name="twitter:card" content="summary">
@@ -363,13 +363,13 @@
       
 
       
-        <h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><h3 id="1-安装Docker"><a href="#1-安装Docker" class="headerlink" title="1.安装Docker"></a>1.安装Docker</h3><ul>
+        <h2 id="1-Docker安装"><a href="#1-Docker安装" class="headerlink" title="1.Docker安装"></a>1.Docker安装</h2><h3 id="1-1-安装Docker"><a href="#1-1-安装Docker" class="headerlink" title="1.1.安装Docker"></a>1.1.安装Docker</h3><ul>
 <li>安装Docker：<code>yum -y install docker</code>  </li>
 <li>开机自启：<code>systemctl enable docker</code>  </li>
 <li>启动Docker： <code>systemctl start docker</code>  </li>
 <li>查看Docker当前的版本<code>docker version</code>  </li>
 </ul>
-<h3 id="2-Docker加速仓库配置"><a href="#2-Docker加速仓库配置" class="headerlink" title="2.Docker加速仓库配置"></a>2.Docker加速仓库配置</h3><ol>
+<h3 id="1-2-Docker加速仓库配置"><a href="#1-2-Docker加速仓库配置" class="headerlink" title="1.2.Docker加速仓库配置"></a>1.2.Docker加速仓库配置</h3><ol>
 <li><p>切换到Docker的配置目录里面： <code>cd /etc/docker/</code>  </p>
 </li>
 <li><p>修改<strong>daemon.json</strong>：  <code>vi daemon.json</code>  按<strong>i</strong>编辑</p>
@@ -380,13 +380,13 @@
 <li><p> 配置文件修改后，重启Docker： <code>systemctl restart docker</code>  </p>
 </li>
 </ol>
-<h2 id="Mysql安装"><a href="#Mysql安装" class="headerlink" title="Mysql安装"></a>Mysql安装</h2><p>执行如下命令：</p>
+<h2 id="2-Mysql安装"><a href="#2-Mysql安装" class="headerlink" title="2.Mysql安装"></a>2.Mysql安装</h2><p>执行如下命令：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name mysql -p <span class="number">3307</span>:<span class="number">3306</span> -e  MYSQL_ROOT_PASSWORD=<span class="number">123456</span> -d mysql:<span class="number">5.7</span> --character-set-server=utf8mb4  --collation-server=utf8mb4_unicode_ci  </span><br></pre></td></tr></table></figure>
 
-<h2 id="Redis安装"><a href="#Redis安装" class="headerlink" title="Redis安装"></a>Redis安装</h2><h3 id="1-安装redis"><a href="#1-安装redis" class="headerlink" title="1.安装redis"></a>1.安装redis</h3><p>执行如下命令：</p>
+<h2 id="3-Redis安装"><a href="#3-Redis安装" class="headerlink" title="3.Redis安装"></a>3.Redis安装</h2><h3 id="3-1-安装redis"><a href="#3-1-安装redis" class="headerlink" title="3.1.安装redis"></a>3.1.安装redis</h3><p>执行如下命令：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name redis -p  <span class="number">6380</span>:<span class="number">6379</span> -d redis  </span><br></pre></td></tr></table></figure>
 
-<h3 id="2-Redis密码配置"><a href="#2-Redis密码配置" class="headerlink" title="2.Redis密码配置"></a>2.Redis密码配置</h3><p>执行以下的命令：</p>
+<h3 id="3-2-Redis密码配置"><a href="#3-2-Redis密码配置" class="headerlink" title="3.2.Redis密码配置"></a>3.2.Redis密码配置</h3><p>执行以下的命令：</p>
 <ol>
 <li><p>进入redis容器里面：<code>docker exec -it redis bash</code>  </p>
 </li>
@@ -395,6 +395,41 @@
 <li><p>配置密码：运行<code>./redis-cli</code>  ，再运行<code>CONFIG SET requirepass 123456</code></p>
 </li>
 </ol>
+<h2 id="4-RocketMQ安装"><a href="#4-RocketMQ安装" class="headerlink" title="4.RocketMQ安装"></a>4.RocketMQ安装</h2><h3 id="4-1-Namesrv的安装"><a href="#4-1-Namesrv的安装" class="headerlink" title="4.1.Namesrv的安装"></a>4.1.Namesrv的安装</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name namesrv -p <span class="number">9876</span>:<span class="number">9876</span> -e <span class="string">&quot;MAX_POSSIBLE_HEAP=100000000&quot;</span> -d rocketmqinc/rocketmq sh mqnamesrv</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-broker的安装"><a href="#4-2-broker的安装" class="headerlink" title="4.2.broker的安装"></a>4.2.broker的安装</h3><ol>
+<li><p>创建文件夹：<code>mkdir -p /usr/local/rocketmq</code>  </p>
+</li>
+<li><p>切换目录：<code>cd /usr/local/rocketmq</code></p>
+</li>
+<li><p>新建broker.conf 文件：<code>vim broker.conf</code>  </p>
+</li>
+<li><p>添加以下的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">brokerClusterName &#x3D; DefaultCluster</span><br><span class="line">brokerName &#x3D; broker-a</span><br><span class="line">brokerId &#x3D; 0</span><br><span class="line">deleteWhen &#x3D; 04</span><br><span class="line">fileReservedTime &#x3D; 48</span><br><span class="line">brokerRole &#x3D; ASYNC_MASTER</span><br><span class="line">flushDiskType &#x3D; ASYNC_FLUSH</span><br><span class="line">brokerIP1 &#x3D; 121.40.140.138</span><br></pre></td></tr></table></figure></li>
+<li><p>```<br>docker run –name broker  -p 10911:10911 -p 10909:10909 -v  /usr/local/rocketmq/broker.conf:/opt/rocketmq-4.4.0/conf/broker.conf  –link namesrv:namesrv -e “NAMESRV_ADDR=namesrv:9876” -e “MAX_POSSIBLE_HEAP=200000000” -d rocketmqinc/rocketmq:4.4.0 sh mqbroker -c /opt/rocketmq-4.4.0/conf/broker.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 4.3.console的安装</span><br><span class="line"></span><br><span class="line">执行</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>docker run –name=rocketmq-console -e “JAVA_OPTS=-Drocketmq.namesrv.addr=121.40.140.138:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false” -p 8080:8080 -d styletang/rocketmq-console-ng</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 5.MongoDB的安装</span><br><span class="line"></span><br><span class="line">执行</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>docker run –name mongo -p 27017:27017 -d mongo –auth</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">MongDB密码配置：</span><br><span class="line"></span><br><span class="line">- &#96;docker exec -it mongo mongo admin&#96;</span><br><span class="line"></span><br><span class="line">- 设置密码：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>db.createUser({ user:’admin’,pwd:’123456’,roles:[ { role:’userAdminAnyDatabase’, db: ‘admin’}]});</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 连接mongodb：![image-20210817170101484](https:&#x2F;&#x2F;gitee.com&#x2F;xiaoczz&#x2F;pic-bed&#x2F;raw&#x2F;master&#x2F;img&#x2F;image-20210817170101484.png)</span><br><span class="line"></span><br><span class="line">## 6.Nacos-Server安装</span><br><span class="line"></span><br><span class="line">### 6.1.安装Nacos-Server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>docker run –name nacos -e MODE=standalone -p 8848:8848 -d nacos/nacos-server:1.1.4</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 7.Sentinel-Dashboard安装</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>docker run –name sentinel  -p 8858:8858 -d  bladex/sentinel-dashboard</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 8.Seata-Server安装</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>docker run –name seata-server -p 8091:8091  -e SEATA_IP=121.40.140.138 -d seataio/seata-server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 9.YApi的私有云部署</span><br><span class="line"></span><br><span class="line">启动YApi-mongo：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>docker run -d –name mongo-yapi mongo  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">初始化YApi：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>docker run -it –rm \</p>
+</li>
+</ol>
+<p>–link mongo-yapi:mongo <br>–entrypoint npm <br>–workdir /api/vendors <br> registry.cn-hangzhou.aliyuncs.com/anoy/yapi <br> run install-server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">![image-20210817171045720](https:&#x2F;&#x2F;gitee.com&#x2F;xiaoczz&#x2F;pic-bed&#x2F;raw&#x2F;master&#x2F;img&#x2F;image-20210817171045720.png)</span><br><span class="line"></span><br><span class="line">启动YApi：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>docker run -d <br>  –name yapi <br>  –link mongo-yapi:mongo <br>  –workdir /api/vendors <br>  -p 3000:3000 <br>  registry.cn-hangzhou.aliyuncs.com/anoy/yapi <br>  server/app.js</p>
+<pre><code>
+</code></pre>
 
       
     </div>
@@ -565,7 +600,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">Docker安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85Docker"><span class="nav-number">1.1.</span> <span class="nav-text">1.安装Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Docker%E5%8A%A0%E9%80%9F%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">2.Docker加速仓库配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Mysql安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">Redis安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85redis"><span class="nav-number">3.1.</span> <span class="nav-text">1.安装redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Redis%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text">2.Redis密码配置</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Docker%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">1.Docker安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%AE%89%E8%A3%85Docker"><span class="nav-number">1.1.</span> <span class="nav-text">1.1.安装Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Docker%E5%8A%A0%E9%80%9F%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">1.2.Docker加速仓库配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Mysql%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">2.Mysql安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Redis%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">3.Redis安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%AE%89%E8%A3%85redis"><span class="nav-number">3.1.</span> <span class="nav-text">3.1.安装redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Redis%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text">3.2.Redis密码配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-RocketMQ%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">4.RocketMQ安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Namesrv%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">4.1.</span> <span class="nav-text">4.1.Namesrv的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-broker%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">4.2.</span> <span class="nav-text">4.2.broker的安装</span></a></li></ol></li></ol></div>
             
 
           </div>
